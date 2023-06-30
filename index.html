@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Получаем сохраненных выбранных персонажей из локального хранилища
+      const savedCharacters = JSON.parse(localStorage.getItem('selectedCharacters'));
+  
+      // Если есть выбранные персонажи, обновляем изображения игроков
+      if (savedCharacters && savedCharacters.length > 0) {
+        for (let i = 0; i < savedCharacters.length; i++) {
+          const selectedCharacterImage = document.getElementById(`player${i + 1}`);
+          selectedCharacterImage.src = `characters-removed/character${savedCharacters[i]}-removebg-preview.png`;
+        }
+      }
+    });
+  </script>
+
+  <title>Document</title>
+</head>
+<body>
+<audio id="backgroundMusic" src="music/background.mp3" autoplay></audio>
+<audio id="goalSound" src="music/Cristiano.mp3"></audio>
+  <div class="score">
+    <div id="player-score">0</div>
+    <div id="computer-score">0</div>
+  </div>
+  <div class="ball" id="ball"></div>
+  <div class="paddle left" id="player-paddle">
+    <img src="" alt="" id="player1">
+  </div>
+  <div class="paddle right" id="computer-paddle">
+    <img src="" alt="" id="player2">
+  </div>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="choose_character.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    height:44vw;
+    background-image: url('background/background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.character-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*background-color: #000000; */
+    color: #FFFFFF;
+}
+
+h1{
+    text-align: center;
+    color:#778622;
+}
+
+.character-images {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.character-images img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+    border: 3px solid #a6a3b4;
+    transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.character-images img:hover {
+    border-color: #3e2e85;
+    transform: scale(1.1) /* Цвет выделения при наведении */
+}
+
+.selected-character {
+    text-align: center;
+}
+
+.selected-character h2 {
+    margin-bottom: 10px;
+}
+
+.selected-character img {
+    width: 200px;
+    height: 200px;
+}
+
+.start-game-button {
+    display: block;
+    width: 200px;
+    height: 60px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    background-color: #778622;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.start-game-button:hover {
+    background-color: #9ac63b;
+}
